@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Apple") )
         {
-            ScoreSystem.score++;
+            gameManager.totalScore += 1;
         }
-
-        
     }
 }

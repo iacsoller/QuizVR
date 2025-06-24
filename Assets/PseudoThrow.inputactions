@@ -1,0 +1,34 @@
+{
+    "name": "PseudoThrow",
+    "maps": [
+        {
+            "name": "PsuedoThrow",
+            "id": "1de7968e-aeda-4fb6-8785-0ca091ed4d8c",
+            "actions": [
+                {
+                    "name": "ClickTHrow",
+                    "type": "Button",
+                    "id": "a4b42049-5629-4354-aedd-585a4522adbb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7ac6fa9b-ffe6-4685-8206-4fef35598b6d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickTHrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

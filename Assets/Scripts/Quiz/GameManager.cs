@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -13,7 +14,12 @@ public class GameManager : MonoBehaviour
     public Text textScore;
 
     [Header("GameOver panel")]
-    public Text lastScore; 
+    public Text lastScore;
+
+    [Header("ObjectPool")]
+    public ObjectPool slippersPool;
+    public float slipperSpeed = 10f;
+
 
 
 
@@ -24,5 +30,40 @@ public class GameManager : MonoBehaviour
 
         //gameOver 
         lastScore.text = totalScore.ToString();
+
+        /*if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Throw();
+        }*/
+    }
+
+    void Throw()
+    {
+        GameObject slipper = slippersPool.GetObject();
+        slipper.transform.position = transform.position;    
+        slipper.transform.rotation = transform.rotation;
+
+        Rigidbody rb = slipper.GetComponent<Rigidbody>();
+
+        if(rb != null )
+        {
+            rb.velocity = slipper.transform.forward * slipperSpeed;
+        }
+
+        StartCoroutine(DeactivateSlipper(slipper));
+    }
+
+    IEnumerator DeactivateSlipper(GameObject slipper)
+    {
+        yield return new WaitForSeconds(2f);
+        slippersPool.ReturnObject(slipper);
+    }
+
+    public void SlipperThrow(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Throw();
+        }
     }
 }

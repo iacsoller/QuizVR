@@ -45,10 +45,11 @@ public class GameManager : MonoBehaviour
 
         Rigidbody rb = slipper.GetComponent<Rigidbody>();
 
-        if(rb != null )
+        //Physics of throwing
+        /*if(rb != null )
         {
             rb.velocity = slipper.transform.forward * slipperSpeed;
-        }
+        }*/
 
         StartCoroutine(DeactivateSlipper(slipper));
     }
@@ -59,11 +60,12 @@ public class GameManager : MonoBehaviour
         slippersPool.ReturnObject(slipper);
     }
 
-    public void SlipperThrow(InputAction.CallbackContext context)
+    //function for throwing using context performed
+    /*public void SlipperThrow(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
             Throw();
         }
-    }
+    }*/
 }

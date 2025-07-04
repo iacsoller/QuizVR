@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8868176979467156378}
   - component: {fileID: 9127869029778942016}
   - component: {fileID: 1118316529384019956}
-  - component: {fileID: 4860027080098458023}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Apple
@@ -287,15 +286,3 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &4860027080098458023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5396256482944235850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4a1f9be12243c4db14578df3a50b35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

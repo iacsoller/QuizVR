@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
     [Header("GameOver panel")]
     public Text lastScore;
 
-    [Header("ObjectPool")]
-    public ObjectPool slippersPool;
-    public float slipperSpeed = 10f;
+    //[Header("ObjectPool")]
+    /*public ObjectPool slippersPool;
+    public float slipperSpeed = 10f;*/
 
 
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         }*/
     }
 
-    void Throw()
+    /*void Throw()
     {
         GameObject slipper = slippersPool.GetObject();
         slipper.transform.position = transform.position;    
@@ -46,19 +46,19 @@ public class GameManager : MonoBehaviour
         Rigidbody rb = slipper.GetComponent<Rigidbody>();
 
         //Physics of throwing
-        /*if(rb != null )
+        *//*if(rb != null )
         {
             rb.velocity = slipper.transform.forward * slipperSpeed;
-        }*/
+        }*//*
 
         StartCoroutine(DeactivateSlipper(slipper));
-    }
+    }*/
 
-    IEnumerator DeactivateSlipper(GameObject slipper)
+    /*IEnumerator DeactivateSlipper(GameObject slipper)
     {
         yield return new WaitForSeconds(2f);
         slippersPool.ReturnObject(slipper);
-    }
+    }*/
 
     //function for throwing using context performed
     /*public void SlipperThrow(InputAction.CallbackContext context)

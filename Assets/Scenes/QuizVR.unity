@@ -1915,6 +1915,7 @@ GameObject:
   - component: {fileID: 586900661}
   - component: {fileID: 586900660}
   - component: {fileID: 586900659}
+  - component: {fileID: 586900662}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -1973,6 +1974,28 @@ Transform:
   - {fileID: 282532696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &586900662
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586900658}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &615973302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2299,11 @@ PrefabInstance:
       propertyPath: respawnPosition
       value: 
       objectReference: {fileID: 2021189085}
+    - target: {fileID: 1118316529384019956, guid: e289dd3dd71d0ff4fb24d6b7c6634362,
+        type: 3}
+      propertyPath: m_ThrowVelocityScale
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5396256482944235850, guid: e289dd3dd71d0ff4fb24d6b7c6634362,
         type: 3}
       propertyPath: m_Name
@@ -3133,7 +3161,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 1.365}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257186790
 MonoBehaviour:
@@ -3885,7 +3913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 0}
-  m_MoveSpeed: 5
+  m_MoveSpeed: 2.5
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -4202,7 +4230,7 @@ MonoBehaviour:
   m_AllowHoverHapticsWhileSelecting: 1
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 30
+  m_MaxRaycastDistance: 100000
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
